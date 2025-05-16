@@ -370,12 +370,13 @@
 
 /* Testimonials Section */
 .testimonials {
-  background-image: linear-gradient(rgba(8, 8, 15, 0.9), rgba(8, 8, 15, 0.9)), url('./assets/images/testimonials-bg.jpg');
+  background-image: linear-gradient(rgba(8, 8, 15, 0.9), rgba(8, 8, 15, 0.9)), url('C:/GitHub/react-/public/assets/images/testimonials-bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   position: relative;
 }
+
 
 .testimonials::before {
   content: '';
