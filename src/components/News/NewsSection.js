@@ -18,7 +18,7 @@ const NewsSection = () => {
       excerpt: "Exploring emerging trends, AI integration, and personalized strategies that will shape digital marketing landscape in the coming years.",
       date: "May 10, 2025",
       category: "Digital Marketing",
-      image: "/assets/images/digital.jpg"  // ✅ Fixed path
+      image: "/assets/images/social.jpg"  // ✅ Fixed path
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const NewsSection = () => {
       excerpt: "Learn how to optimize your e-commerce store with proven SEO techniques that drive traffic and increase conversions.",
       date: "May 5, 2025",
       category: "SEO",
-      image: "/assets/images/e.jpg"  // ✅ Fixed path
+      image: "/assets/images/e commerce.jpg"  // ✅ Fixed path
     },
     {
       id: 3,

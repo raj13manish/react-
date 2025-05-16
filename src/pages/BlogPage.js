@@ -50,7 +50,7 @@ const BlogPage = () => {
     excerpt: "Learn how video content can significantly boost your marketing efforts and drive better engagement with your audience.",
     date: "April 15, 2025",
     category: "Video Marketing",
-    image: "/assets/images/Social.jpg"
+    image: "/assets/images/video.jpg"
   },
   {
     id: 6,
