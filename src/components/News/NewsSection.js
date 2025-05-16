@@ -18,7 +18,7 @@ const NewsSection = () => {
       excerpt: "Exploring emerging trends, AI integration, and personalized strategies that will shape digital marketing landscape in the coming years.",
       date: "May 10, 2025",
       category: "Digital Marketing",
-      image: "/assets/images/social.jpg"  // ✅ Fixed path
+      image: "/assets/images/digital.jpg"  // ✅ Fixed path
     },
     {
       id: 2,

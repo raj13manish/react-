@@ -1153,3 +1153,81 @@
 
 
 }
+.service-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.service-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: var(--gradient-bg);
+  transition: width 0.3s ease;
+}
+
+.service-link:hover::after {
+  width: 100%;
+}
+
+.service-cta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 198, 255, 0.1) 0%, rgba(123, 47, 247, 0.1) 100%);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
+  transform: skewX(-15deg);
+}
+
+.service-card:hover .service-icon::before {
+  left: 100%;
+}
+
+
+.award-view-btn {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--primary-color);
+  color: var(--darker-bg);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.award-view-btn span {
+  color: var(--darker-bg);
+  opacity: 1;
+}
+
+

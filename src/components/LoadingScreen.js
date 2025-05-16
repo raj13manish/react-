@@ -8,28 +8,65 @@ const LoadingScreen = () => {
         className="loading-logo"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ 
+          duration: 0.8,
+          type: "spring",
+          stiffness: 100
+        }}
       >
-        <img src="/assets/images/logo-dark.png" alt="Yashah Media" />
+        <svg width="100" height="100" viewBox="0 0 100 100">
+          <motion.circle 
+            cx="50" 
+            cy="50" 
+            r="30"
+            stroke="#00c6ff"
+            strokeWidth="4"
+            fill="none"
+            initial={{ pathLength: 0, rotate: -90 }}
+            animate={{ pathLength: 1, rotate: 0 }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.circle 
+            cx="50" 
+            cy="50" 
+            r="20"
+            stroke="#0072ff"
+            strokeWidth="4"
+            fill="none"
+            initial={{ pathLength: 0, rotate: 90 }}
+            animate={{ pathLength: 1, rotate: 0 }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          />
+          <motion.circle 
+            cx="50" 
+            cy="50" 
+            r="10"
+            stroke="#7b2ff7"
+            strokeWidth="4"
+            fill="none"
+            initial={{ pathLength: 0, rotate: -90 }}
+            animate={{ pathLength: 1, rotate: 0 }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          />
+        </svg>
       </motion.div>
       
-      <div className="loading-spinner">
-        <motion.div
-          initial={{ rotate: 0 }}
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-          className="spinner"
-        />
-      </div>
-      
-      <motion.p
+      <motion.div 
+        className="loading-text"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
-        className="loading-text"
       >
-        Loading amazing experiences...
-      </motion.p>
+        <h3>YASHAH MEDIA</h3>
+        <p>Creating Digital Excellence</p>
+      </motion.div>
+      
+      <motion.div
+        className="loading-progress"
+        initial={{ width: "0%" }}
+        animate={{ width: "100%" }}
+        transition={{ duration: 2 }}
+      />
       
       <style jsx>{`
         .loading-screen {
@@ -38,7 +75,7 @@ const LoadingScreen = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: #0a0a0a;
+          background-color: var(--darker-bg);
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -50,26 +87,31 @@ const LoadingScreen = () => {
           margin-bottom: 2rem;
         }
         
-        .loading-logo img {
-          height: 60px;
-          width: auto;
-        }
-        
-        .loading-spinner {
-          margin-bottom: 1rem;
-        }
-        
-        .spinner {
-          width: 40px;
-          height: 40px;
-          border: 3px solid rgba(255, 255, 255, 0.1);
-          border-top-color: #7B55E8;
-          border-radius: 50%;
-        }
-        
         .loading-text {
+          text-align: center;
+        }
+        
+        .loading-text h3 {
+          background: linear-gradient(to right, #00c6ff, #0072ff, #7b2ff7);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin-bottom: 0.5rem;
+          letter-spacing: 3px;
+        }
+        
+        .loading-text p {
+          color: rgba(255, 255, 255, 0.6);
           font-size: 0.9rem;
-          opacity: 0.7;
+          letter-spacing: 1px;
+        }
+        
+        .loading-progress {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 3px;
+          background: linear-gradient(to right, #00c6ff, #0072ff, #7b2ff7);
         }
       `}</style>
     </div>

@@ -23,7 +23,7 @@ const HeroSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          We thrive on creativity and innovation. Our team is constantly exploring new.
+          WE CREATE IMMERSIVE DIGITAL EXPERIENCES
         </motion.h6>
         
         <motion.h1 
@@ -32,7 +32,7 @@ const HeroSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          Beyond Digital Boundaries
+          BEYOND DIGITAL BOUNDARIES
         </motion.h1>
         
         <motion.p 
@@ -41,7 +41,9 @@ const HeroSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          Our creative expertise drives innovative, result-oriented strategies that elevate brands and accelerate business growth. From social media marketing to SEO, website development, and brand promotions, we craft compelling digital experiences.
+          Our creative expertise drives innovative, result-oriented strategies that elevate brands 
+          and accelerate business growth. From social media marketing to SEO, website development, 
+          and brand promotions, we craft compelling digital experiences.
         </motion.p>
         
         <motion.div 
@@ -50,8 +52,28 @@ const HeroSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <Link to="/contact" className="btn btn-primary">Get Started</Link>
-          <Link to="/services" className="btn btn-secondary">Our Services</Link>
+          <Link to="/contact" className="btn btn-primary">
+            <span>Get Started</span>
+          </Link>
+          <Link to="/services" className="btn btn-secondary">
+            <span>Our Services</span>
+          </Link>
+        </motion.div>
+      </div>
+      
+      <div className="hero-scroll-indicator">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ 
+            duration: 1,
+            delay: 2,
+            repeat: Infinity,
+            repeatType: "reverse"
+          }}
+        >
+          <span>Scroll Down</span>
+          <i className="fas fa-chevron-down"></i>
         </motion.div>
       </div>
     </section>
